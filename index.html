@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/erikflowers/weather-icons/ea5d5c73/css/weather-icons.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SuperWeather</title>
+</head>
+
+
+<body>
+    <main>
+        <div class="top-nav">
+            <nav>
+                <div class="nav-wrapper yellow darken-2">
+                    <a href="#!" class="brand-logo center">SuperWeather</a>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            
+            <div class="row m4"></div>
+
+            <div class="row">
+                <div class="column">
+                    <nav>
+                        <div class="nav-wrapper yellow darken-2">
+                            <form onsubmit="validateForm(event); return false" name="locSearch"> 
+                                <div class="input-field">
+                                <input id="search" type="search" name="locSearchBar" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <span id="region-name" class="flow-text"></span>
+            </div>
+            <div class="row m4"></div>
+
+            <div class="row">
+                <div class="column push-s6" style="display: inline">
+                    <i class="wi large" id="weather-icon"></i>
+                </div>
+                <div class="column offset-s6" style="display: inline-block">
+                    <h1 id="weather-degrees"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <span id="weather-conditions" class="flow-text">Please enter a search term above.</span>
+            </div>
+            <div class="row m4"></div>
+
+
+        </div>
+    </main>
+    <footer class="page-footer yellow darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">Made with Materialize, Yahoo! Weather API and ♥</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/index.js"></script>
+            
+</body>
+</html>
