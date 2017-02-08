@@ -7,3 +7,7 @@
   main {
     flex: 1 0 auto;
   }
+
+  .bigtext {
+    font-size: 75px;
+  }
