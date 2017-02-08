@@ -1,13 +1,38 @@
  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  .bigtext {
-    font-size: 75px;
-  }
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
+ 
+ main {
+     flex: 1 0 auto;
+ }
+ 
+ .bigtext {
+     font-size: 75px;
+ }
+ 
+ #weather-icon {
+     margin-top: 10px;
+ }
+ 
+ .smoltext {
+     font-size: 16px;
+ }
+ 
+ .forecast {
+     font-size: 24px;
+ }
+ 
+ .fc-icon {
+     font-size: 24px;
+ }
+ 
+ .forecast-conditions {
+     font-size: 16px;
+ }
+ 
+ .row-spacer {
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }

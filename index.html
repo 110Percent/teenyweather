@@ -39,7 +39,7 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col">
+                <div class="col m2">
                     <form id="unit-switch" style="display: none;" action="#">
                         <p>
                             <input name="unit" type="radio" id="c" value="temp-c" onclick="setUnits('c')" checked />
@@ -53,28 +53,103 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col m6">
+                    <span id="weather-timestamp" class="flow-text smoltext"></span>
+                </div>
             </div>
-            <div class="row m4"></div>
+            <div class="row row-spacer"></div>
             <div class="row">
-                <span id="region-name" class="flow-text"></span>
+                <div class="col">
+                    <div class="progress" style="display: none;" id="preloader">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
             </div>
-            <div class="row m4"></div>
+            <div class="row">
+                <div id="col m6">
+                    <span id="region-name" class="flow-text center"></span>
+                </div>
+            </div>
 
             <div class="row">
+                <div class="col">
+                    <span id="weather-temperature" class="flow-text bigtext center"></span>
+                </div>
+                <div class="col">
+                    <span id="weather-conditions" class="flow-text bigtext center"></span>
+                </div>
                 <div class="col">
                     <i class="wi large" id="weather-icon"></i>
                 </div>
-                <div class="col">
-                    <span id="weather-temperature" class="flow-text bigtext"></span>
+            </div>
+            <div class="row row-spacer"></div>
+            <div class="row">
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-1"></span>
                 </div>
-                <div class="col">
-                    <span id="weather-conditions" class="flow-text bigtext"></span>
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-2"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-3"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-4"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-5"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-weekday flow-text" id="fcw-6"></span>
                 </div>
             </div>
-            <div class="row m4"></div>
+            <div class="row">
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-1"></span>
+                    <i class="wi fc-icon" id="fc-icon-1"></i>
+                </div>
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-2"></span>
+                    <i class="wi fc-icon" id="fc-icon-2"></i>
+                </div>
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-3"></span>
+                    <i class="wi fc-icon" id="fc-icon-3"></i>
+                </div>
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-4"></span>
+                    <i class="wi fc-icon" id="fc-icon-4"></i>
+                </div>
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-5"></span>
+                    <i class="wi fc-icon" id="fc-icon-5"></i>
+                </div>
+                <div class="col m2">
+                    <span class="forecast flow-text" id="fc-6"></span>
+                    <i class="wi fc-icon" id="fc-icon-6"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-1"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-2"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-3"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-4"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-5"></span>
+                </div>
+                <div class="col m2">
+                    <span class="forecast-conditions flow-text" id="fcc-6"></span>
+                </div>
+            </div>
 
-
-        </div>
     </main>
     <footer class="page-footer yellow darken-3">
         <div class="container">
