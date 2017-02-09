@@ -3,6 +3,7 @@ var searchCity;
 var weatherObject;
 var canGetWeather;
 var units = "c";
+getCityFromGeoLoc();
 
 
 
@@ -81,6 +82,30 @@ function validateForm(e) {
     var x = document.forms["locSearch"]["locSearchBar"].value;
     applyWeather(searchWeather(x));
     return false;
+}
+
+function getCityFromGeoLoc() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                long: position.coords.longitude
+            };
+            console.log("Current coordinates: " + pos.lat + ", " + pos.long);
+            var getCity = JSON.parse(httpGet("https://nominatim.openstreetmap.org/reverse?format=json&lat=" + pos.lat + "&lon=" + pos.long + "&zoom=18&addressdetails=1"));
+            var cityString;
+            if (getCity.address.city) {
+                cityString = getCity.address.city + " " + getCity.address.country;
+            } else if (getCity.address.village) {
+                cityString = getCity.address.village + " " + getCity.address.country;
+            } else if (getCity.address.state) {
+                cityString = getCity.address.state + " " + getCity.address.country;
+            }
+            applyWeather(searchWeather(cityString));
+        });
+
+
+    }
 }
 
 function setUnits(toUnit) {
